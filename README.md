@@ -69,18 +69,18 @@ password=123456
 
 ## Estrutura de pastas
 
-API_Automation/
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── auth.py
-│   ├── tasks.py
-│   ├── database.py
-│   ├── models.py
-│   └── schemas.py
-├── requirements.txt
-├── tasks.db
-└── README.md
+TaskManager-API/
+- ├── app/
+- │ ├── init.py
+- │ ├── auth.py
+- │ ├── database.py
+- │ ├── models.py
+- │ ├── schemas.py
+- │ └── tasks.py
+- ├── main.py
+- ├── tasks.db
+- ├── README.md
+- └── requirements.txt
 
 ## Licença 
 
