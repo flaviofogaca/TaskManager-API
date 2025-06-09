@@ -84,4 +84,4 @@ TaskManager-API/
 
 ## Licença 
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE]() para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/flaviofogaca/TaskManager-API/blob/main/LICENSE) para mais detalhes.
