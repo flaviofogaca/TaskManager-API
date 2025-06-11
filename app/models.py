@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from app.database import Base
 
 class Task(Base):
@@ -8,6 +8,7 @@ class Task(Base):
     title = Column(String, index=True)
     description = Column(String, nullable=True)
     is_done = Column(Boolean, default=False)
+    user_id = Column(Integer, ForeignKey("users.id"))
 
 # Esse modelo é só pra tipagem do current_user
 class User(Base):

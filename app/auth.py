@@ -15,10 +15,11 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 fake_user_db = {
     "flavio": {
+        "id": 1,
         "username": "flavio",
         "full_name": "Flavio Fogaça",
         "hashed_password": pwd_context.hash("123456"),
@@ -52,6 +53,7 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
 
 
 class User(BaseModel):
+    id: int
     username: str
     full_name: str | None = None
 
@@ -69,7 +71,7 @@ def get_current_user(token: str = Security(oauth2_scheme)) -> User:
         user = fake_user_db.get(username)
         if user is None:
             raise credentials_exception
-        return User(username=user["username"], full_name=user["full_name"])
+        return User(id=user["id"], username=user["username"], full_name=user["full_name"])
     except JWTError:
         raise credentials_exception
 
