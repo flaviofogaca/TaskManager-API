@@ -37,7 +37,7 @@ Uma API REST desenvolvida com **FastAPI** para gerenciamento de tarefas, com aut
 1. Clone o repositório:
 
 
-git clone https://github.com/seu-usuario/taskmanager-api.git
+git clone https://github.com/flaviofogaca/TaskManager-API.git
 cd taskmanager-api
 
 2. Crie e Ative um ambiente virtual:
