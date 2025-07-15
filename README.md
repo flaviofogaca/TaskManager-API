@@ -13,6 +13,10 @@ Uma API REST desenvolvida com **FastAPI** para gerenciamento de tarefas, com aut
 - Autenticação com `username` e `password` usando `OAuth2PasswordBearer`
 - Geração de token com `POST /auth/token`
 - Documentação interativa com **Swagger UI** e **ReDoc**
+- Cadastro e login com autenticação JWT (`/signup` e `/login`)
+- Criação, leitura, atualização e exclusão de tarefas
+- Filtros por status (`is_done`) e data de vencimento (`due_date`)
+- Proteção por usuário: cada tarefa só pode ser vista/editada pelo dono
 
 ---
 
@@ -21,8 +25,10 @@ Uma API REST desenvolvida com **FastAPI** para gerenciamento de tarefas, com aut
 - [Python 3.11+](https://www.python.org/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Uvicorn](https://www.uvicorn.org/)
-- [Python-Jose](https://python-jose.readthedocs.io/)
+- [Python-Jose (JWT)](https://python-jose.readthedocs.io/)
 - [Passlib (bcrypt)](https://passlib.readthedocs.io/)
+- [SQLAlchemy](https://app.readthedocs.org/projects/sqlalchemy/)
+- [SQLite](https://sqlite-database.readthedocs.io/en/latest/)
 
 ---
 
